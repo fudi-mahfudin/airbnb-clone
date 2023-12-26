@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native'
 import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 import { Link } from 'expo-router'
 import Colors from '@/constants/Colors'
 import { useRef, useState } from 'react'
 import * as Haptics from 'expo-haptics'
+import { ScrollView } from 'react-native-gesture-handler'
 
 const categories = [
   {
