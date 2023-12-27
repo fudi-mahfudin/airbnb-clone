@@ -1,8 +1,7 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+
 import { Tabs } from 'expo-router'
-import Colors from '@/constants/Colors'
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
+import Colors from '@/constants/Colors'
 
 const Layout = () => {
   return (
@@ -46,6 +45,7 @@ const Layout = () => {
         name="profile"
         options={{
           tabBarLabel: 'Profile',
+          headerShown: false,
           tabBarIcon: ({ color, size}) => <Ionicons name='person-circle-outline' color={color} size={size} />
         }}
       />
