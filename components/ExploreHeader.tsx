@@ -1,10 +1,10 @@
+import { useRef, useState } from 'react'
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native'
 import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 import { Link } from 'expo-router'
-import Colors from '@/constants/Colors'
-import { useRef, useState } from 'react'
 import * as Haptics from 'expo-haptics'
 import { ScrollView } from 'react-native-gesture-handler'
+import Colors from '@/constants/Colors'
 
 const categories = [
   {
@@ -30,10 +30,6 @@ const categories = [
   {
     name: 'Beachfront',
     icon: 'beach-access',
-  },
-  {
-    name: 'Countryside',
-    icon: 'nature-people',
   },
   {
     name: 'Countryside',

@@ -5,25 +5,28 @@ import ExploreHeader from '@/components/ExploreHeader';
 import Listings from '@/components/Listings';
 import listingsData from '@/assets/data/airbnb-listings.json';
 import ListingsMap from '@/components/ListingsMap';
-import listingDataGeo from '@/assets/data/airbnb-listings.geo.sample.json';
+import listingsDataGeo from '@/assets/data/airbnb-listings.geo.sample.json';
+import ListingsBottomSheet from '@/components/ListingsBottomSheet';
 
 const Page = () => {
   const [category, setCategory] = useState('Tiny homes');
   const items = useMemo(() => listingsData as any, []);
+  const geoItems = useMemo(() => listingsDataGeo, [])
 
   const onDataChanged = (category: string) => {
     setCategory(category)
   }
 
   return (
-    <View style={{ flex: 1, marginTop: 130 }}>
+    <View style={{ flex: 1, marginTop: 120 }}>
       <Stack.Screen
         options={{
           header: () => <ExploreHeader onCategoryChanged={onDataChanged} />
         }}
       />
       {/* <Listings listings={items} category={category} /> */}
-      <ListingsMap listings={listingDataGeo} />
+      <ListingsMap listings={geoItems} />
+      <ListingsBottomSheet listings={items} category={category} />
     </View>
   )
 }
