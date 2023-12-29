@@ -108,13 +108,24 @@ const Page = () => {
         </View>
       )}
 
-      {isSignedIn && <Button title='Log out' onPress={onHandleLogout} color={Colors.dark} />}
+      <View style={styles.btnContainer}>
+      {isSignedIn && (
+        <TouchableOpacity
+          onPress={onHandleLogout}
+          style={defaultStyles.btn}
+        >
+          <Text style={defaultStyles.btnText}>Log out</Text>
+        </TouchableOpacity>
+      )}
 
       { !isSignedIn && (
         <Link href={'/(modals)/login'} asChild>
-          <Button title="Log In" color={Colors.dark} />
+          <TouchableOpacity style={defaultStyles.btn}>
+            <Text style={defaultStyles.btnText}>Log In</Text>
+          </TouchableOpacity>
         </Link>
       )}
+      </View>
     </SafeAreaView>
   )
 }
@@ -161,6 +172,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 8,
     height: 50,
+  },
+  btnContainer: {
+    marginHorizontal: 24,
   }
 })
 

@@ -28,7 +28,7 @@ const Listings = ({listings: items, category, refresh}: Props) => {
 
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 100);
   }, [category])
 
   const renderRow: ListRenderItem<Listing> = ({ item }) => (

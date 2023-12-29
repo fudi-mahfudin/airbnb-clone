@@ -8,32 +8,40 @@ import Colors from '@/constants/Colors'
 
 const categories = [
   {
-    name: 'Tiny homes',
+    name: 'House',
     icon: 'home',
   },
   {
-    name: 'Cabins',
-    icon: 'house-siding',
+    name: 'Condominium',
+    icon: 'foundation',
   },
   {
-    name: 'Trending',
-    icon: 'local-fire-department',
+    name: 'Bed & Breakfast',
+    icon: 'hotel',
   },
   {
-    name: 'Play',
-    icon: 'videogame-asset',
-  },
-  {
-    name: 'City',
+    name: 'Apartment',
     icon: 'apartment',
   },
   {
-    name: 'Beachfront',
-    icon: 'beach-access',
+    name: 'Loft',
+    icon: 'location-city',
   },
   {
-    name: 'Countryside',
-    icon: 'nature-people',
+    name: 'Townhouse',
+    icon: 'house',
+  },
+  {
+    name: 'Cabin',
+    icon: 'house-siding',
+  },
+  {
+    name: 'Bungalow',
+    icon: 'landscape',
+  },
+  {
+    name: 'Vacation home',
+    icon: 'deck',
   },
 ];
 
